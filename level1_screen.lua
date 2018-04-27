@@ -61,10 +61,11 @@ local uArrow
 
 local motionx = 0
 local SPEED = 5
-local LINEAR_VELOCITY = -100
+local LINEAR_VELOCITY = -200
 local GRAVITY = 7
 
 local leftW 
+local rightW
 local topW
 local floor
 
