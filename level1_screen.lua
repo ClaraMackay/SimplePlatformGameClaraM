@@ -57,11 +57,12 @@ local heart2
 local numLives = 2
 
 local rArrow 
+local lArrow
 local uArrow
 
 local motionx = 0
 local SPEED = 5
-local LINEAR_VELOCITY = -200
+local LINEAR_VELOCITY = -100
 local GRAVITY = 7
 
 local leftW 
@@ -452,6 +453,14 @@ function scene:create( event )
     rArrow = display.newImageRect("Images/RightArrowUnpressed.png", 100, 50)
     rArrow.x = display.contentWidth * 9.2 / 10
     rArrow.y = display.contentHeight * 9.5 / 10
+   
+    -- Insert objects into the scene group in order to ONLY be associated with this scene
+    sceneGroup:insert( rArrow)
+
+        --Insert the left arrow
+    rArrow = display.newImageRect("Images/LeftArrowUnpressed.png", 100, 50)
+    lArrow.x = display.contentWidth * 9.2 / 10
+    lArrow.y = display.contentHeight * 9.5 / 10
    
     -- Insert objects into the scene group in order to ONLY be associated with this scene
     sceneGroup:insert( rArrow)
